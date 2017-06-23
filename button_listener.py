@@ -39,6 +39,7 @@ def switch_widget(app, widget_id, index):
     #   2: Curso
     #   3: Materia
     if widget_id == 1:
+<<<<<<< HEAD
         if index == 0: # tela de cadastro/edicao
             app.aluno_btn_create.setEnabled(False)
             app.aluno_btn_edit.setEnabled(False)
