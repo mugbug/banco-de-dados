@@ -1309,7 +1309,7 @@ QDateEdit::down-arrow:focus
           <item>
            <widget class="QStackedWidget" name="aluno_widget">
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="aluno1">
              <layout class="QGridLayout" name="gridLayout_8">
@@ -1423,7 +1423,13 @@ QDateEdit::down-arrow:focus
                  </widget>
                 </item>
                 <item row="5" column="2" colspan="2">
-                 <widget class="QComboBox" name="aluno_input_curso"/>
+                 <widget class="QComboBox" name="aluno_input_curso">
+                  <item>
+                   <property name="text">
+                    <string>GEC</string>
+                   </property>
+                  </item>
+                 </widget>
                 </item>
                 <item row="3" column="2" colspan="2">
                  <widget class="QSpinBox" name="aluno_input_matricula">
@@ -1466,52 +1472,52 @@ QDateEdit::down-arrow:focus
              <layout class="QGridLayout" name="gridLayout_14">
               <item row="1" column="1">
                <layout class="QGridLayout" name="gridLayout_13">
-                <item row="3" column="1">
+                <item row="5" column="1">
                  <widget class="QLabel" name="aluno_lbl_semestre_2">
                   <property name="text">
                    <string>NF</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="1">
+                <item row="6" column="1">
                  <widget class="QLabel" name="aluno_lbl_curso_2">
                   <property name="text">
                    <string>Situaçao</string>
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="1">
+                <item row="4" column="1">
                  <widget class="QLabel" name="aluno_lbl_matricula_2">
                   <property name="text">
                    <string>NP3</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="2" colspan="2">
+                <item row="3" column="2" colspan="2">
                  <widget class="QSpinBox" name="aluno_input_np2">
                   <property name="maximum">
                    <number>100</number>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1">
+                <item row="3" column="1">
                  <widget class="QLabel" name="aluno_lbl_idade_2">
                   <property name="text">
                    <string>NP2</string>
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="1">
+                <item row="2" column="1">
                  <widget class="QLabel" name="aluno_lbl_nome_2">
                   <property name="text">
                    <string>NP1</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="2" colspan="2">
+                <item row="6" column="2" colspan="2">
                  <widget class="QLineEdit" name="aluno_input_situacao"/>
                 </item>
-                <item row="0" column="2" colspan="2">
+                <item row="2" column="2" colspan="2">
                  <widget class="QSpinBox" name="aluno_input_np1">
                   <property name="minimumSize">
                    <size>
@@ -1524,7 +1530,7 @@ QDateEdit::down-arrow:focus
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="2" colspan="2">
+                <item row="5" column="2" colspan="2">
                  <widget class="QSpinBox" name="aluno_input_nf">
                   <property name="minimum">
                    <number>1</number>
@@ -1534,18 +1540,56 @@ QDateEdit::down-arrow:focus
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="2" colspan="2">
+                <item row="4" column="2" colspan="2">
                  <widget class="QSpinBox" name="aluno_input_np3">
                   <property name="maximum">
                    <number>100</number>
                   </property>
                  </widget>
                 </item>
-                <item row="5" column="3">
+                <item row="7" column="3">
                  <widget class="QPushButton" name="aluno_submeter_nota">
                   <property name="text">
                    <string>Submeter</string>
                   </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLabel" name="label_2">
+                  <property name="text">
+                   <string>Aluno</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2" colspan="2">
+                 <widget class="QComboBox" name="aluno_input_aluno">
+                  <item>
+                   <property name="text">
+                    <string>1020</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="label_3">
+                  <property name="text">
+                   <string>Materia</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2" colspan="2">
+                 <widget class="QComboBox" name="aluno_input_materia">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Engenharia de Software II</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -1653,6 +1697,30 @@ QDateEdit::down-arrow:focus
                 </item>
                 <item row="2" column="0" colspan="3">
                  <widget class="QTableWidget" name="aluno_table">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="verticalScrollBarPolicy">
+                   <enum>Qt::ScrollBarAsNeeded</enum>
+                  </property>
+                  <property name="horizontalScrollBarPolicy">
+                   <enum>Qt::ScrollBarAsNeeded</enum>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::NoEditTriggers</set>
+                  </property>
+                  <property name="dragEnabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SingleSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <attribute name="verticalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
                   <column>
                    <property name="text">
                     <string>Nome</string>
@@ -1746,6 +1814,13 @@ QDateEdit::down-arrow:focus
              <widget class="QPushButton" name="aluno_btn_nota">
               <property name="text">
                <string>Adicionar Nota</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="aluno_btn_consultar_nota">
+              <property name="text">
+               <string>Consultar Nota</string>
               </property>
              </widget>
             </item>
@@ -1947,6 +2022,15 @@ QDateEdit::down-arrow:focus
                 </item>
                 <item row="2" column="0" colspan="3">
                  <widget class="QTableWidget" name="curso_table">
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::NoEditTriggers</set>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <attribute name="verticalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
                   <column>
                    <property name="text">
                     <string>Nome</string>
@@ -2224,6 +2308,15 @@ QDateEdit::down-arrow:focus
                 </item>
                 <item row="2" column="0" colspan="3">
                  <widget class="QTableWidget" name="materia_table">
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::NoEditTriggers</set>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <attribute name="verticalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
                   <column>
                    <property name="text">
                     <string>Nome</string>
@@ -2327,6 +2420,51 @@ QDateEdit::down-arrow:focus
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>aluno_input_nome</tabstop>
+  <tabstop>aluno_input_idade</tabstop>
+  <tabstop>aluno_input_matricula</tabstop>
+  <tabstop>aluno_input_semestre</tabstop>
+  <tabstop>aluno_input_curso</tabstop>
+  <tabstop>aluno_submeter</tabstop>
+  <tabstop>aluno_input_np2</tabstop>
+  <tabstop>aluno_input_situacao</tabstop>
+  <tabstop>aluno_input_np1</tabstop>
+  <tabstop>aluno_input_nf</tabstop>
+  <tabstop>aluno_input_np3</tabstop>
+  <tabstop>aluno_submeter_nota</tabstop>
+  <tabstop>aluno_input_search</tabstop>
+  <tabstop>aluno_submeter_busca</tabstop>
+  <tabstop>aluno_table</tabstop>
+  <tabstop>aluno_btn_create</tabstop>
+  <tabstop>aluno_btn_edit</tabstop>
+  <tabstop>aluno_btn_search</tabstop>
+  <tabstop>aluno_btn_list</tabstop>
+  <tabstop>aluno_btn_remove</tabstop>
+  <tabstop>aluno_btn_nota</tabstop>
+  <tabstop>curso_input_nome</tabstop>
+  <tabstop>curso_input_duracao</tabstop>
+  <tabstop>curso_submeter</tabstop>
+  <tabstop>curso_input_search</tabstop>
+  <tabstop>curso_submeter_busca</tabstop>
+  <tabstop>curso_table</tabstop>
+  <tabstop>curso_btn_create</tabstop>
+  <tabstop>curso_btn_edit</tabstop>
+  <tabstop>curso_btn_search</tabstop>
+  <tabstop>curso_btn_list</tabstop>
+  <tabstop>curso_btn_remove</tabstop>
+  <tabstop>materia_input_aulas</tabstop>
+  <tabstop>materia_input_nome</tabstop>
+  <tabstop>materia_submeter</tabstop>
+  <tabstop>materia_input_search</tabstop>
+  <tabstop>materia_submeter_busca</tabstop>
+  <tabstop>materia_table</tabstop>
+  <tabstop>materia_btn_create</tabstop>
+  <tabstop>materia_btn_edit</tabstop>
+  <tabstop>materia_btn_search</tabstop>
+  <tabstop>materia_btn_list</tabstop>
+  <tabstop>materia_btn_remove</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
