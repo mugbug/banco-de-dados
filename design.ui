@@ -1289,7 +1289,7 @@ QDateEdit::down-arrow:focus
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="aluno">
        <property name="geometry">
@@ -1307,11 +1307,11 @@ QDateEdit::down-arrow:focus
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QStackedWidget" name="aluno_create_stackedWidget">
+           <widget class="QStackedWidget" name="aluno_create_widget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
-            <widget class="QWidget" name="create" native="true">
+            <widget class="QWidget" name="aluno1">
              <layout class="QGridLayout" name="gridLayout_8">
               <item row="0" column="1">
                <layout class="QGridLayout" name="gridLayout_2">
@@ -1462,7 +1462,7 @@ QDateEdit::down-arrow:focus
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="Notas">
+            <widget class="QWidget" name="aluno2">
              <layout class="QGridLayout" name="gridLayout_14">
               <item row="1" column="1">
                <layout class="QGridLayout" name="gridLayout_13">
@@ -1515,7 +1515,7 @@ QDateEdit::down-arrow:focus
                  <widget class="QSpinBox" name="aluno_input_np1">
                   <property name="minimumSize">
                    <size>
-                    <width>150</width>
+                    <width>87</width>
                     <height>0</height>
                    </size>
                   </property>
@@ -1604,7 +1604,7 @@ QDateEdit::down-arrow:focus
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="Consulta">
+            <widget class="QWidget" name="aluno3">
              <layout class="QGridLayout" name="gridLayout_12">
               <item row="0" column="0">
                <layout class="QGridLayout" name="gridLayout_11">
@@ -1784,11 +1784,11 @@ QDateEdit::down-arrow:focus
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QStackedWidget" name="curso_create_stackedWidget">
+           <widget class="QStackedWidget" name="curso_create_widget">
             <property name="currentIndex">
              <number>1</number>
             </property>
-            <widget class="QWidget" name="curso_create_stackedWidgetPage1" native="true">
+            <widget class="QWidget" name="curso1">
              <layout class="QGridLayout" name="gridLayout_9">
               <item row="1" column="1">
                <layout class="QGridLayout" name="gridLayout_4">
@@ -1898,7 +1898,7 @@ QDateEdit::down-arrow:focus
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page">
+            <widget class="QWidget" name="curso2">
              <layout class="QGridLayout" name="gridLayout_16">
               <item row="0" column="0">
                <layout class="QGridLayout" name="gridLayout_15">
@@ -2046,6 +2046,14 @@ QDateEdit::down-arrow:focus
        </layout>
       </widget>
       <widget class="QWidget" name="materia">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>651</width>
+         <height>370</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>Materia</string>
        </attribute>
@@ -2053,11 +2061,11 @@ QDateEdit::down-arrow:focus
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QStackedWidget" name="materia_create_stackedWidget">
+           <widget class="QStackedWidget" name="materia_create">
             <property name="currentIndex">
              <number>1</number>
             </property>
-            <widget class="QWidget" name="materia_create_stackedWidgetPage1" native="true">
+            <widget class="QWidget" name="materia1">
              <layout class="QGridLayout" name="gridLayout_10">
               <item row="1" column="1">
                <layout class="QGridLayout" name="gridLayout_6">
@@ -2167,7 +2175,7 @@ QDateEdit::down-arrow:focus
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page_2">
+            <widget class="QWidget" name="materia2">
              <layout class="QGridLayout" name="gridLayout_18">
               <item row="0" column="0">
                <layout class="QGridLayout" name="gridLayout_17">
