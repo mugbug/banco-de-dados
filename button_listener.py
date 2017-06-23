@@ -31,7 +31,7 @@ def switch_widget(app, widget_id, index):
     if widget_id == 1:
         if index == 0:
             
-        app.aluno_widget.setCurrentIndex(index)
+            app.aluno_widget.setCurrentIndex(index)
     if widget_id == 2:
         app.curso_widget.setCurrentIndex(index)
     if widget_id == 3:

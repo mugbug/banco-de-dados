@@ -17,7 +17,12 @@ if __name__ == '__main__':
     '''
 
     #print crud.AlunoDAO().getmaterias(2)
+    '''
+    idAluno = crud.AlunoDAO.getidaluno(1019)[0][0]
+    print idAluno
+    print crud.AlunoDAO.getmaterias(idAluno)
+    '''
 
+    crud.NotaDAO.setnp3(70, 1019, 'Banco de dados')
 
-    print crud.NotaDAO().getalunonota(2,2)
 

@@ -45,6 +45,22 @@ class AlunoDAO(object):
                 return ans
 
     @staticmethod
+    def getidaluno(mat):
+        db = connect()
+
+        if db != 1:
+            cur = db.cursor()
+            try:
+                cur.execute("select idAluno from aluno where Matricula like '{0}'"
+                            .format(mat))
+            except MySQLdb.Error:
+                print "Error to execute script"
+            finally:
+                ans = cur.fetchall()
+                cur.close()
+                return ans
+
+    @staticmethod
     def getmaterias(id):
         db = connect()
 
@@ -174,6 +190,22 @@ class MateriaDAO(object):
                 cur.close()
                 return ans
 
+    @staticmethod
+    def getidmateria(materia):
+        db = connect()
+
+        if db != 1:
+            cur = db.cursor()
+            try:
+                cur.execute("select idMateria from materia where Nome like '{0}'"
+                            .format(materia))
+            except MySQLdb.Error:
+                print "Error to execute script"
+            finally:
+                ans = cur.fetchall()
+                cur.close()
+                return ans
+
 class NotaDAO():
 
     @staticmethod
@@ -208,3 +240,57 @@ class NotaDAO():
                 ans = cur.fetchall()
                 cur.close()
                 return ans
+
+    @staticmethod
+    def setnp1(np1, matricula, materia):
+
+        idAluno = AlunoDAO.getidaluno(matricula)[0][0]
+        idMateria = MateriaDAO.getidmateria(materia)[0][0]
+
+        db = connect()
+        if db != 1:
+            cur = db.cursor()
+            try:
+                cur.execute("insert into nota (NP1, Aluno_idAluno, Materia_idMateria) values ('{0}', '{1}', '{2}')"
+                            .format(np1, idAluno, idMateria))
+                db.commit()
+            except MySQLdb.Error:
+                print "Error to execute script"
+            finally:
+                cur.close()
+
+    @staticmethod
+    def setnp2(np2, matricula, materia):
+
+        idAluno = AlunoDAO.getidaluno(matricula)[0][0]
+        idMateria = MateriaDAO.getidmateria(materia)[0][0]
+
+        db = connect()
+        if db != 1:
+            cur = db.cursor()
+            try:
+                cur.execute("update nota set NP2 = '{0}' where Aluno_idAluno = '{1}' and Materia_idMateria = '{2}'"
+                            .format(np2, idAluno, idMateria))
+                db.commit()
+            except MySQLdb.Error as e:
+                print e
+            finally:
+                cur.close()
+
+    @staticmethod
+    def setnp3(np3, matricula, materia):
+
+        idAluno = AlunoDAO.getidaluno(matricula)[0][0]
+        idMateria = MateriaDAO.getidmateria(materia)[0][0]
+
+        db = connect()
+        if db != 1:
+            cur = db.cursor()
+            try:
+                cur.execute("update nota set NP3 = '{0}' where Aluno_idAluno = '{1}' and Materia_idMateria = '{2}'"
+                            .format(np3, idAluno, idMateria))
+                db.commit()
+            except MySQLdb.Error:
+                print "Error to execute script"
+            finally:
+                cur.close()
