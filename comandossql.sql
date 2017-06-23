@@ -1,6 +1,6 @@
 #Inseri aluno
 INSERT INTO aluno (Nome, Matricula, SemestreAtual, Idade, Curso_idCurso) 
-values('Matheus', 1019, 7, 22, 1);
+values('Pedro', 1075, 7, 21, 1);
 
 #inseri o curso
 insert into curso (Nome, HorasDuracao) values ('Eng Computacao', 700);
@@ -55,6 +55,11 @@ inner join materia on materia.idMateria = Materia_idMateria;
 #seleciona aluno e o curso que faz
 select aluno.Nome, Matricula, SemestreAtual, Idade, curso.Nome from aluno
 inner join curso on curso.idCurso = Curso_idCurso;
+
+
+select * from curso;
+
+select count(*) from aluno where Curso_idCurso = 3;
 
 
 

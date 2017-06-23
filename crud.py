@@ -29,6 +29,39 @@ class AlunoDAO(object):
             finally:
                 cur.close()
 
+class CursoDAO(object):
+
+    @staticmethod
+    def getcurso():
+        db = connect()
+
+        if db != 1:
+            cur = db.cursor()
+            try:
+                cur.execute("select * from curso")
+            except MySQLdb.Error:
+                print "Error to execute script"
+            finally:
+                ans = cur.fetchall()
+                cur.close()
+                return ans
+
+    @staticmethod
+    def get_numb_alun(cursoid):
+        db = connect()
+
+        if db != 1:
+            cur = db.cursor()
+            try:
+                cur.execute("select count(*) from aluno where Curso_idCurso = '{0}';"
+                            .format(cursoid))
+            except MySQLdb.Error:
+                print "Error to execute script"
+            finally:
+                ans = cur.fetchall()
+                cur.close()
+                return ans
+
 
 
 
