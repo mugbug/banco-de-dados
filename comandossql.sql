@@ -52,6 +52,11 @@ select NP1, NP2, NP3, NF, Situacao,aluno.nome, materia.Nome from nota
 inner join aluno on aluno.idAluno = 2
 inner join materia on materia.idMateria = Materia_idMateria;
 
+#seleciona aluno e o curso que faz
+select aluno.Nome, Matricula, SemestreAtual, Idade, curso.Nome from aluno
+inner join curso on curso.idCurso = Curso_idCurso;
+
+
 
 
 
