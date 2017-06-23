@@ -1307,7 +1307,7 @@ QDateEdit::down-arrow:focus
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QStackedWidget" name="aluno_create_widget">
+           <widget class="QStackedWidget" name="aluno_widget">
             <property name="currentIndex">
              <number>2</number>
             </property>
@@ -1784,7 +1784,7 @@ QDateEdit::down-arrow:focus
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QStackedWidget" name="curso_create_widget">
+           <widget class="QStackedWidget" name="curso_widget">
             <property name="currentIndex">
              <number>1</number>
             </property>
@@ -2061,7 +2061,7 @@ QDateEdit::down-arrow:focus
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QStackedWidget" name="materia_create">
+           <widget class="QStackedWidget" name="materia_widget">
             <property name="currentIndex">
              <number>1</number>
             </property>
