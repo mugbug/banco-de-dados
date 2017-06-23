@@ -24,6 +24,10 @@ values (3, 1);
 insert into nota (NP1,NP2,Aluno_idAluno,Materia_idMateria) 
 values (60, 100, 2, 1);
 
+#inseri aluno na materia
+insert into aluno_has_materia (Aluno_idAluno, Materia_idMateria) values (2, 2);
+
+
 
 select * from aluno;
 select * from materia;
@@ -31,6 +35,7 @@ select * from curso;
 select idCurso, curso.nome from curso;
 select * from curso_has_materia;
 select * from nota;
+select * from aluno_has_materia;
 
 #seleciona nome pertecentes aos cursos (pega todos)
 select materia.Nome, curso.Nome from materia  
@@ -38,14 +43,14 @@ inner join curso_has_materia on Materia_idMateria = idMateria
 inner join curso on Curso_idCurso = curso.idCurso;
 
 #seleciona nome pertecentes aos cursos (pega todos)
-select materia.Nome, curso.Nome from materia  
+select materia.Nome, curso.Nome, materia.NumAulas from materia  
 inner join curso_has_materia on Materia_idMateria = idMateria
 inner join curso on Curso_idCurso = curso.idCurso;
 
 #seleciona materia que o aluno faz (pega o especifico do aluno com id 2) 
-select materia.Nome, aluno.Nome from materia  
-inner join aluno_has_materia on Materia_idMateria = idMateria
-inner join aluno on Aluno_idAluno = 2;
+select aluno.Nome, materia.Nome from aluno
+inner join aluno_has_materia on Aluno_idAluno = 2
+inner join materia on Materia_idMateria = materia.idMateria;
 
 #seleciona nota da materia de um aluno (pega especifico do aluno com id 2)
 select NP1, NP2, NP3, NF, Situacao,aluno.nome, materia.Nome from nota
@@ -58,6 +63,7 @@ inner join curso on curso.idCurso = Curso_idCurso;
 
 
 select * from curso;
+delete from curso where idCurso = 5;
 
 select count(*) from aluno where Curso_idCurso = 3;
 
