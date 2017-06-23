@@ -110,17 +110,17 @@ class CursoDAO(object):
                 cur.close()
 
     @staticmethod
-    def getcurso():
+    def getcurso(nome):
         db = connect()
 
         if db != 1:
             cur = db.cursor()
             try:
-                cur.execute("select * from curso")
+                cur.execute("select idCurso from curso where Nome = '{0}'".format(nome))
             except MySQLdb.Error:
                 print "Error to execute script"
             finally:
-                ans = cur.fetchall()
+                ans = cur.fetchall()[0]
                 cur.close()
                 return ans
 

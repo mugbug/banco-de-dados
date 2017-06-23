@@ -2,8 +2,9 @@
 from PyQt4.QtGui import QMessageBox
 from PyQt4 import QtGui, QtCore
 
-from models import Aluno
+from models import *
 import button_listener as bl
+from crud import *
 
 def create_aluno(app):
     # pega dados dos campos
@@ -15,6 +16,7 @@ def create_aluno(app):
     if nome != '':
         a = Aluno(None, nome, matricula, curso, semestre, idade)
         # AlunoDAO
+        AlunoDAO.insert(a)
         # popula a tabela
         row = app.aluno_table.rowCount()
         app.aluno_table.insertRow(row)
@@ -37,13 +39,17 @@ def create_curso(app):
     nome = app.curso_input_nome.text()
     carga_horaria = str(app.curso_input_duracao.value())
     if nome != '':
-        # c = Curso()
-        # MatriculaDAO - INSERT
+        c = Curso(None, nome, carga_horaria)
+        CursoDAO.add(c)
         row = app.curso_table.rowCount()
         app.curso_table.insertRow(row)
         app.curso_table.setItem(row, 0, QtGui.QTableWidgetItem(nome))
         app.curso_table.setItem(row, 1, QtGui.QTableWidgetItem(carga_horaria))
-        app.curso_table.setItem(row, 2, QtGui.QTableWidgetItem('Desconhecido'))
+        try:
+            num_alunos = str(CursoDAO.get_numb_alun(CursoDAO.getcurso()))
+            app.curso_table.setItem(row, 2, QtGui.QTableWidgetItem(num_alunos))
+        except:
+            app.curso_table.setItem(row, 2, QtGui.QTableWidgetItem('Desconhecido'))
         QMessageBox.information(app, 'Sucesso!', 'Curso criado com sucesso!')
     else:
         QMessageBox.critical(app, 'Erro!', 'Todos os campos devem ser preenchidos!')
@@ -52,8 +58,8 @@ def create_materia(app):
     nome = app.materia_input_nome.text()
     num_aulas = app.materia_input_aulas.value()
     if nome != '':
-        # m = Matricula()
-        # MatriculaDAO - INSERT
+        m = Materia(None, nome, num_aulas)
+        MateriaDAO.add(m)
         row = app.materia_table.rowCount()
         app.materia_table.insertRow(row)
         app.materia_table.setItem(row, 0, QtGui.QTableWidgetItem(nome))
@@ -67,8 +73,17 @@ def nota_aluno(app):
     matricula = int(app.aluno_input_aluno.currentText())
     materia = app.aluno_input_materia.currentText()
     np1 = app.aluno_input_np1.value()
-    # n = Nota()
-    # NotaDAO - INSERT
+    np2 = app.aluno_input_np2.value()
+    np3 = app.aluno_input_np3.value()
+    nf = app.aluno_input_np3.value()
+    situacao = app.aluno_input_situacao.text()
+
+    n = Nota(None, np1, np2, matricula, materia)
+    if situacao == '':
+        NotaDAO.add(n)
+        # mudar situação
+    # + if dependendo da situação
+    #setnp1, setnp2, setnp3
 
 def edit_aluno(app):
     # pega a linha selecionada
