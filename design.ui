@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>611</width>
-    <height>416</height>
+    <width>679</width>
+    <height>491</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1289,15 +1289,15 @@ QDateEdit::down-arrow:focus
     <item row="0" column="0">
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="aluno">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>583</width>
-         <height>295</height>
+         <width>651</width>
+         <height>370</height>
         </rect>
        </property>
        <attribute name="label">
@@ -1309,23 +1309,13 @@ QDateEdit::down-arrow:focus
           <item>
            <widget class="QStackedWidget" name="aluno_create_stackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="create" native="true">
              <layout class="QGridLayout" name="gridLayout_8">
-              <item row="0" column="0">
+              <item row="0" column="1">
                <layout class="QGridLayout" name="gridLayout_2">
-                <item row="4" column="1">
-                 <widget class="QSpinBox" name="aluno_input_semestre">
-                  <property name="minimum">
-                   <number>1</number>
-                  </property>
-                  <property name="maximum">
-                   <number>10</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
+                <item row="0" column="2">
                  <spacer name="verticalSpacer_5">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
@@ -1338,38 +1328,14 @@ QDateEdit::down-arrow:focus
                   </property>
                  </spacer>
                 </item>
-                <item row="2" column="0">
-                 <widget class="QLabel" name="aluno_lbl_idade">
-                  <property name="text">
-                   <string>Idade</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0">
-                 <widget class="QLabel" name="aluno_lbl_curso">
-                  <property name="text">
-                   <string>Curso</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="aluno_input_nome"/>
-                </item>
-                <item row="4" column="0">
+                <item row="4" column="1">
                  <widget class="QLabel" name="aluno_lbl_semestre">
                   <property name="text">
                    <string>Semestre</string>
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QSpinBox" name="aluno_input_matricula">
-                  <property name="maximum">
-                   <number>10000</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
+                <item row="1" column="1">
                  <widget class="QLabel" name="aluno_lbl_nome">
                   <property name="text">
                    <string>Nome</string>
@@ -1377,23 +1343,27 @@ QDateEdit::down-arrow:focus
                  </widget>
                 </item>
                 <item row="5" column="1">
-                 <widget class="QComboBox" name="aluno_input_curso"/>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QSpinBox" name="aluno_input_idade">
-                  <property name="maximum">
-                   <number>130</number>
+                 <widget class="QLabel" name="aluno_lbl_curso">
+                  <property name="text">
+                   <string>Curso</string>
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="0">
+                <item row="2" column="1">
+                 <widget class="QLabel" name="aluno_lbl_idade">
+                  <property name="text">
+                   <string>Idade</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
                  <widget class="QLabel" name="aluno_lbl_matricula">
                   <property name="text">
                    <string>Matricula</string>
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="1">
+                <item row="6" column="2">
                  <spacer name="verticalSpacer_6">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
@@ -1406,76 +1376,155 @@ QDateEdit::down-arrow:focus
                   </property>
                  </spacer>
                 </item>
+                <item row="6" column="3">
+                 <widget class="QPushButton" name="aluno_submeter">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Submeter</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2" colspan="2">
+                 <widget class="QLineEdit" name="aluno_input_nome">
+                  <property name="minimumSize">
+                   <size>
+                    <width>300</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2" colspan="2">
+                 <widget class="QSpinBox" name="aluno_input_idade">
+                  <property name="maximum">
+                   <number>130</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="2" colspan="2">
+                 <widget class="QSpinBox" name="aluno_input_semestre">
+                  <property name="minimum">
+                   <number>1</number>
+                  </property>
+                  <property name="maximum">
+                   <number>10</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="2" colspan="2">
+                 <widget class="QComboBox" name="aluno_input_curso"/>
+                </item>
+                <item row="3" column="2" colspan="2">
+                 <widget class="QSpinBox" name="aluno_input_matricula">
+                  <property name="maximum">
+                   <number>10000</number>
+                  </property>
+                 </widget>
+                </item>
                </layout>
+              </item>
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0">
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </widget>
             <widget class="QWidget" name="Notas">
              <layout class="QGridLayout" name="gridLayout_14">
-              <item row="0" column="0">
+              <item row="1" column="1">
                <layout class="QGridLayout" name="gridLayout_13">
-                <item row="4" column="1">
+                <item row="3" column="1">
                  <widget class="QLabel" name="aluno_lbl_semestre_2">
                   <property name="text">
                    <string>NF</string>
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="2">
-                 <widget class="QSpinBox" name="aluno_input_np3">
-                  <property name="maximum">
-                   <number>100</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="2">
-                 <spacer name="verticalSpacer_15">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="5" column="1">
+                <item row="4" column="1">
                  <widget class="QLabel" name="aluno_lbl_curso_2">
                   <property name="text">
                    <string>Situaçao</string>
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="2">
-                 <widget class="QSpinBox" name="aluno_input_np2">
-                  <property name="maximum">
-                   <number>100</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1">
+                <item row="2" column="1">
                  <widget class="QLabel" name="aluno_lbl_matricula_2">
                   <property name="text">
                    <string>NP3</string>
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="2">
-                 <spacer name="verticalSpacer_16">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
+                <item row="1" column="2" colspan="2">
+                 <widget class="QSpinBox" name="aluno_input_np2">
+                  <property name="maximum">
+                   <number>100</number>
                   </property>
-                  <property name="sizeHint" stdset="0">
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="aluno_lbl_idade_2">
+                  <property name="text">
+                   <string>NP2</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLabel" name="aluno_lbl_nome_2">
+                  <property name="text">
+                   <string>NP1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="2" colspan="2">
+                 <widget class="QLineEdit" name="aluno_input_situacao"/>
+                </item>
+                <item row="0" column="2" colspan="2">
+                 <widget class="QSpinBox" name="aluno_input_np1">
+                  <property name="minimumSize">
                    <size>
-                    <width>20</width>
-                    <height>40</height>
+                    <width>150</width>
+                    <height>0</height>
                    </size>
                   </property>
-                 </spacer>
+                  <property name="maximum">
+                   <number>100</number>
+                  </property>
+                 </widget>
                 </item>
-                <item row="4" column="2">
+                <item row="3" column="2" colspan="2">
                  <widget class="QSpinBox" name="aluno_input_nf">
                   <property name="minimum">
                    <number>1</number>
@@ -1485,66 +1534,73 @@ QDateEdit::down-arrow:focus
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="1">
-                 <widget class="QLabel" name="aluno_lbl_idade_2">
-                  <property name="text">
-                   <string>NP2</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLabel" name="aluno_lbl_nome_2">
-                  <property name="text">
-                   <string>NP1</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="2">
-                 <widget class="QLineEdit" name="aluno_input_situacao"/>
-                </item>
-                <item row="1" column="2">
-                 <widget class="QSpinBox" name="aluno_input_np1">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>0</height>
-                   </size>
-                  </property>
+                <item row="2" column="2" colspan="2">
+                 <widget class="QSpinBox" name="aluno_input_np3">
                   <property name="maximum">
                    <number>100</number>
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0">
-                 <spacer name="horizontalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
+                <item row="5" column="3">
+                 <widget class="QPushButton" name="aluno_submeter_nota">
+                  <property name="text">
+                   <string>Submeter</string>
                   </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="2" column="3">
-                 <spacer name="horizontalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Expanding</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>30</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
+                 </widget>
                 </item>
                </layout>
+              </item>
+              <item row="2" column="1">
+               <spacer name="verticalSpacer_16">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="0">
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="2">
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <spacer name="verticalSpacer_15">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </widget>
@@ -1581,7 +1637,21 @@ QDateEdit::down-arrow:focus
                 <item row="1" column="1">
                  <widget class="QLineEdit" name="aluno_input_search"/>
                 </item>
-                <item row="2" column="0" colspan="2">
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>Nome</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="aluno_submeter_busca">
+                  <property name="text">
+                   <string>Pesquisar</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="3">
                  <widget class="QTableWidget" name="aluno_table">
                   <column>
                    <property name="text">
@@ -1608,13 +1678,6 @@ QDateEdit::down-arrow:focus
                     <string>Curso</string>
                    </property>
                   </column>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label">
-                  <property name="text">
-                   <string>Nome</string>
-                  </property>
                  </widget>
                 </item>
                </layout>
@@ -1710,8 +1773,8 @@ QDateEdit::down-arrow:focus
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>583</width>
-         <height>295</height>
+         <width>651</width>
+         <height>370</height>
         </rect>
        </property>
        <attribute name="label">
@@ -1727,59 +1790,111 @@ QDateEdit::down-arrow:focus
             </property>
             <widget class="QWidget" name="curso_create_stackedWidgetPage1" native="true">
              <layout class="QGridLayout" name="gridLayout_9">
-              <item row="0" column="0">
+              <item row="1" column="1">
                <layout class="QGridLayout" name="gridLayout_4">
-                <item row="0" column="1">
-                 <spacer name="verticalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QLineEdit" name="curso_input_nome">
+                  <property name="minimumSize">
                    <size>
-                    <width>20</width>
-                    <height>40</height>
+                    <width>300</width>
+                    <height>0</height>
                    </size>
                   </property>
-                 </spacer>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="curso_input_nome"/>
+                 </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QLabel" name="curso_lbl_nome">
-                  <property name="text">
-                   <string>Nome</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QSpinBox" name="curso_input_duracao">
-                  <property name="maximum">
-                   <number>130</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
                  <widget class="QLabel" name="curso_lbl_duracao">
                   <property name="text">
                    <string>Carga Horaria</string>
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <spacer name="verticalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="curso_lbl_nome">
+                  <property name="text">
+                   <string>Nome</string>
                   </property>
-                  <property name="sizeHint" stdset="0">
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QSpinBox" name="curso_input_duracao">
+                  <property name="maximum">
+                   <number>130</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="curso_submeter">
+                  <property name="minimumSize">
                    <size>
-                    <width>20</width>
-                    <height>40</height>
+                    <width>100</width>
+                    <height>0</height>
                    </size>
                   </property>
-                 </spacer>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Submeter</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
+              </item>
+              <item row="1" column="2">
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="0">
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="1">
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </widget>
@@ -1823,7 +1938,14 @@ QDateEdit::down-arrow:focus
                 <item row="1" column="1">
                  <widget class="QLineEdit" name="curso_input_search"/>
                 </item>
-                <item row="2" column="0" colspan="2">
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="curso_submeter_busca">
+                  <property name="text">
+                   <string>Pesquisar</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="3">
                  <widget class="QTableWidget" name="curso_table">
                   <column>
                    <property name="text">
@@ -1937,59 +2059,111 @@ QDateEdit::down-arrow:focus
             </property>
             <widget class="QWidget" name="materia_create_stackedWidgetPage1" native="true">
              <layout class="QGridLayout" name="gridLayout_10">
-              <item row="0" column="0">
+              <item row="1" column="1">
                <layout class="QGridLayout" name="gridLayout_6">
                 <item row="1" column="0">
-                 <widget class="QLabel" name="materia_lbl_nome">
-                  <property name="text">
-                   <string>Nome</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QSpinBox" name="materia_input_aulas">
-                  <property name="maximum">
-                   <number>500</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="materia_input_nome"/>
-                </item>
-                <item row="2" column="0">
                  <widget class="QLabel" name="materia_lbl_aulas">
                   <property name="text">
                    <string>Numero de Aulas</string>
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="1">
-                 <spacer name="verticalSpacer_9">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="materia_lbl_nome">
+                  <property name="text">
+                   <string>Nome</string>
                   </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
+                 </widget>
                 </item>
-                <item row="3" column="1">
-                 <spacer name="verticalSpacer_10">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QSpinBox" name="materia_input_aulas">
+                  <property name="maximum">
+                   <number>500</number>
                   </property>
-                  <property name="sizeHint" stdset="0">
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="2">
+                 <widget class="QLineEdit" name="materia_input_nome">
+                  <property name="minimumSize">
                    <size>
-                    <width>20</width>
-                    <height>40</height>
+                    <width>300</width>
+                    <height>0</height>
                    </size>
                   </property>
-                 </spacer>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="materia_submeter">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Submeter</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
+              </item>
+              <item row="1" column="2">
+               <spacer name="horizontalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="0">
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <spacer name="verticalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="1">
+               <spacer name="verticalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </widget>
@@ -2033,7 +2207,14 @@ QDateEdit::down-arrow:focus
                   </property>
                  </spacer>
                 </item>
-                <item row="2" column="0" colspan="2">
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="materia_submeter_busca">
+                  <property name="text">
+                   <string>Pesquisar</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="3">
                  <widget class="QTableWidget" name="materia_table">
                   <column>
                    <property name="text">
